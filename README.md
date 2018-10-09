@@ -19,17 +19,17 @@ Below I place a copy of the final report (in Polish language) containing all the
    - Podział i funkcjonalność programu
 
 ### 2. Specyfikacja wewnętrzna:
-   Opis programu w języku wysokiego poziomu
-   Opis funkcji bibliotek DLL
-   Schemat blokowy algorytmu
+   - Opis programu w języku wysokiego poziomu
+   - Opis funkcji bibliotek DLL
+   - Schemat blokowy algorytmu
 
 ### 3. Specyfikacja zewnętrzna:
-   Struktura danych wejściowych
-   Komunikaty
+   - Struktura danych wejściowych
+   - Komunikaty
 
 ### 4. Uruchamianie i testowanie:
-   Testowanie
-   Wyniki czasowe
+   - Testowanie
+   - Wyniki czasowe
 
 ### 5. Analiza działania programu
 
