@@ -7,7 +7,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 ==================================================================
 
-### Spis treści:
+## Spis treści:
 
 
 ### 1. Temat projektu:
@@ -16,28 +16,19 @@ Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
    - Założenia projektowe
    - Podział i funkcjonalność programu
 
+### 2. Specyfikacja wewnętrzna:
+   - 1. Opis programu w języku wysokiego poziomu
+   - 2. Opis funkcji bibliotek DLL
+   - 3. Schemat blokowy algorytmu
 
+### 3. Specyfikacja zewnętrzna:
+   - 1. Struktura danych wejściowych
+   - 2. Komunikaty
 
+### 4. Uruchamianie i testowanie:
+- 1. Testowanie
+- 2. Wyniki czasowe
 
-### - 1. Temat projektu:
-#### * 1. Opis zasady działania algorytmu Levenshteina
-#### * 2. Analiza zadania, modyfikacja algorytmu, uzasadnienie
-#### * 3. Założenia projektowe
-#### * 4. Podział i funkcjonalność programu
+### 5. Analiza działania programu
 
-### - 2. Specyfikacja wewnętrzna:
-#### * 1. Opis programu w języku wysokiego poziomu
-#### * 2. Opis funkcji bibliotek DLL
-#### * 3. Schemat blokowy algorytmu
-
-### -3. Specyfikacja zewnętrzna:
-#### * 1. Struktura danych wejściowych
-#### * 2. Komunikaty
-
-### - 4. Uruchamianie i testowanie:
-#### * 1. Testowanie
-#### * 2. Wyniki czasowe
-
-### - 5. Analiza działania programu
-
-### - 6. Wnioski
+### 6. Wnioski
