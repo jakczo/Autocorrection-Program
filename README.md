@@ -7,10 +7,10 @@ Below I place a copy of the final report (in Polish language) containing all the
 Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 ==================================================================
 
-## Spis treści:
+### Spis treści:
 
 
-1. Temat projektu:
+### 1. Temat projektu:
    - Opis zasady działania algorytmu Levenshteina
    - Analiza zadania, modyfikacja algorytmu, uzasadnienie
    - Założenia projektowe
