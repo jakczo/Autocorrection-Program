@@ -6,9 +6,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 ==================================================================
-<p align="center">
-  ## Spis treści:
-</p>
+## <p align="center">Spis treści:</p>
 
 
 
