@@ -10,6 +10,15 @@ Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 ## Spis treści:
 
 
+### 1. Temat projektu:
+####   - 1. Opis zasady działania algorytmu Levenshteina
+####   - 2. Analiza zadania, modyfikacja algorytmu, uzasadnienie
+####   - 3. Założenia projektowe
+####   - 4. Podział i funkcjonalność programu
+
+
+
+
 ### - 1. Temat projektu:
 #### * 1. Opis zasady działania algorytmu Levenshteina
 #### * 2. Analiza zadania, modyfikacja algorytmu, uzasadnienie
