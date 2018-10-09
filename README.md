@@ -12,25 +12,25 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 
 
-### <p align="center"> 1. Temat projektu: </p>
-   <p align="center"> Opis zasady działania algorytmu Levenshteina </p>
-   <p align="center"> Analiza zadania, modyfikacja algorytmu, uzasadnienie </p>
-   <p align="center"> Założenia projektowe </p>
-   <p align="center"> Podział i funkcjonalność programu </p>
+### 1. Temat projektu: 
+   - Opis zasady działania algorytmu Levenshteina 
+   - Analiza zadania, modyfikacja algorytmu, uzasadnienie 
+   - Założenia projektowe 
+   - Podział i funkcjonalność programu
 
-### <p align="center"> 2. Specyfikacja wewnętrzna: </p>
-   <p align="center"> Opis programu w języku wysokiego poziomu </p>
-   <p align="center"> Opis funkcji bibliotek DLL </p>
-   <p align="center"> Schemat blokowy algorytmu </p>
+### 2. Specyfikacja wewnętrzna:
+   Opis programu w języku wysokiego poziomu
+   Opis funkcji bibliotek DLL
+   Schemat blokowy algorytmu
 
-### <p align="center"> 3. Specyfikacja zewnętrzna: </p>
-   <p align="center"> Struktura danych wejściowych </p>
-   <p align="center"> Komunikaty </p>
+### 3. Specyfikacja zewnętrzna:
+   Struktura danych wejściowych
+   Komunikaty
 
-### <p align="center"> 4. Uruchamianie i testowanie: </p>
-   <p align="center"> Testowanie </p>
-   <p align="center"> Wyniki czasowe </p>
+### 4. Uruchamianie i testowanie:
+   Testowanie
+   Wyniki czasowe
 
-### <p align="center"> 5. Analiza działania programu </p>
+### 5. Analiza działania programu
 
-### <p align="center"> 6. Wnioski </p>
+### 6. Wnioski
