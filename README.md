@@ -7,7 +7,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 ## <p align="center"> Spis treści: </p>
 
-### 1. [Temat projektu](#-temat-projektu-): 
+### 1. [Temat projektu](#-1-temat-projektu-): 
    - Opis zasady działania algorytmu Levenshteina 
    - Analiza zadania, modyfikacja algorytmu, uzasadnienie 
    - Założenia projektowe 
