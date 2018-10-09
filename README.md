@@ -19,9 +19,9 @@ Below I place a copy of the final report (in Polish language) containing all the
    - <p align="center"> Podział i funkcjonalność programu </p>
 
 ### <p align="center"> 2. Specyfikacja wewnętrzna: </p>
-   <p align="center"> - Opis programu w języku wysokiego poziomu </p>
-   - <p align="center"> Opis funkcji bibliotek DLL </p>
-   - <p align="center"> Schemat blokowy algorytmu </p>
+   <p align="center">     - Opis programu w języku wysokiego poziomu </p>
+   <p align="center">     - Opis funkcji bibliotek DLL </p>
+   <p align="center">     - <p align="center"> Schemat blokowy algorytmu </p>
 
 ### <p align="center"> 3. Specyfikacja zewnętrzna: </p>
    - <p align="center"> Struktura danych wejściowych </p>
