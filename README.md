@@ -7,7 +7,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 ## <p align="center"> Spis treści: </p>
 
-### [1. Temat projektu](#1. Temat projektu): 
+### [Temat projektu](#Temat projektu): 
    - Opis zasady działania algorytmu Levenshteina 
    - Analiza zadania, modyfikacja algorytmu, uzasadnienie 
    - Założenia projektowe 
@@ -30,7 +30,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 ### 6. Wnioski
 
-## <p align="center"> 1. Temat projektu </p>
+## <p align="center"> Temat projektu </p>
 
 	Tematem projektu było napisanie programu używającego algorytmu Levenshteina do znalezienia słowa o najmniejszej odległości edycyjnej, względem słowa wpisanego przez użytkownika.
    
