@@ -17,17 +17,17 @@ Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
    - Podział i funkcjonalność programu
 
 ### 2. Specyfikacja wewnętrzna:
-   - 1. Opis programu w języku wysokiego poziomu
-   - 2. Opis funkcji bibliotek DLL
-   - 3. Schemat blokowy algorytmu
+   - Opis programu w języku wysokiego poziomu
+   - Opis funkcji bibliotek DLL
+   - Schemat blokowy algorytmu
 
 ### 3. Specyfikacja zewnętrzna:
-   - 1. Struktura danych wejściowych
-   - 2. Komunikaty
+   - Struktura danych wejściowych
+   - Komunikaty
 
 ### 4. Uruchamianie i testowanie:
-- 1. Testowanie
-- 2. Wyniki czasowe
+   - Testowanie
+   - Wyniki czasowe
 
 ### 5. Analiza działania programu
 
