@@ -11,28 +11,26 @@ Below I place a copy of the final report (in Polish language) containing all the
    - [Opis zasady działania algorytmu Levenshteina](#opis-zasady-dzia%C5%82ania-algorytmu-levenshteina-krok-po-kroku) 
    - [Analiza zadania, modyfikacja algorytmu, uzasadnienie](#analiza-zadania-modyfikacja-algorytmu-uzasadnienie)
    - [Założenia projektowe](#za%C5%82o%C5%BCenia-projektowe)
-   - [Podział i funkcjonalność programu](#funkcjonalno%C5%9B%C4%87-programu)
+   - [Funkcjonalność programu](#funkcjonalno%C5%9B%C4%87-programu)
 
-### 2. [Specyfikacja wewnętrzna](#-2-specyfikacja):
-   - Opis programu w języku wysokiego poziomu
-   - Opis funkcji bibliotek DLL
-   - Schemat blokowy algorytmu
+### 2. [Specyfikacja wewnętrzna](#-2-specyfikacja-wewn%C4%99trzna-):
+   - [Opis programu w języku wysokiego poziomu](#opis-programu-w-j%C4%99zyku-wysokiego-poziomu)
+   - [Opis funkcji bibliotek DLL](#opis-funkcji-z-bibliotek-dll)
+   - [Schemat blokowy algorytmu](#schemat-blokowy-algorytmu)
 
-### 3. Specyfikacja zewnętrzna:
-   - Struktura danych wejściowych
-   - Komunikaty
+### 3. [Specyfikacja zewnętrzna](#-3-specyfikacja-zewn%C4%99trzna-programu-):
+   - [Struktura danych wejściowych](#struktura-danych-wej%C5%9Bciowych)
+   - [Komunikaty](#komunikaty)
 
-### 4. Uruchamianie i testowanie:
-   - Testowanie
-   - Wyniki czasowe
+### 4. [Uruchamianie i testowanie](#-4-uruchamianie-i-testowanie-):
+   - [Testowanie](#testowanie)
+   - [Wyniki czasowe](#wyniki-czasowe)
 
-### 5. Analiza działania programu
-
-### 6. Wnioski
+### 5. [Analiza działania programu](#-5-analiza-dzia%C5%82ania-programu-)
 
 ## <p align="center"> 1. Temat projektu </p>
 
-	Tematem projektu było napisanie programu używającego algorytmu Levenshteina do znalezienia słowa o najmniejszej odległości edycyjnej, względem słowa wpisanego przez użytkownika.
+Tematem projektu było napisanie programu używającego algorytmu Levenshteina do znalezienia słowa o najmniejszej odległości edycyjnej, względem słowa wpisanego przez użytkownika.
    
 #### Opis zasady działania algorytmu Levenshteina krok po kroku:
 
