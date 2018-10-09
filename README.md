@@ -7,7 +7,7 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 ## <p align="center"> Spis treści: </p>
 
-### 1. Temat projektu: 
+### 1. [Temat projektu](#Temat projektu): 
    - Opis zasady działania algorytmu Levenshteina 
    - Analiza zadania, modyfikacja algorytmu, uzasadnienie 
    - Założenia projektowe 
@@ -153,7 +153,7 @@ Program główny ma wczytywać dane z pliku zewnętrznego, umożliwiać podstawo
 
 @@@@
 
-## <p align="center"> 3. Specyfikacja zewnętrzna programu: </p>
+## <p align="center"> 3. Specyfikacja zewnętrzna programu </p>
 
 #### Struktura danych wejściowych:
 
@@ -167,7 +167,7 @@ Dane wejściowe zawarte są w jednym pliku .txt. Na pojedynczy zestaw danych wej
 
 	Podczas używania programu użytkownik widzi komunikaty w oknie konsoli. Komunikaty dotyczą wyboru biblioteki, podania liczby wątków, podania ciągu znaków lub sekwencji DNA, rezultatu działania programu lub braku pliku wejściowego.
 	
-## <p align="center"> 4. Uruchamianie i testowanie: </p>
+## <p align="center"> 4. Uruchamianie i testowanie </p>
 
 #### Testowanie:
 
@@ -198,7 +198,7 @@ Poniższe wykresy słupkowe obrazują uzyskane wyniki czasowe (w milisekundach) 
 
 @@@@
 
-## <p align="center"> 5. Analiza działania programu: </p>
+## <p align="center"> 5. Analiza działania programu </p>
 
 	Do przeprowadzenia analizy działania programu wykorzystałem wbudowane w kompilator Visual Studio 15 narzędzie diagnostyczne „Performance Profiler”.
 
