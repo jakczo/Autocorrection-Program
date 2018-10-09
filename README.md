@@ -8,12 +8,12 @@ Below I place a copy of the final report (in Polish language) containing all the
 ## <p align="center"> Spis treści: </p>
 
 ### 1. [Temat projektu](#-1-temat-projektu-): 
-   - Opis zasady działania algorytmu Levenshteina 
-   - Analiza zadania, modyfikacja algorytmu, uzasadnienie 
-   - Założenia projektowe 
-   - Podział i funkcjonalność programu
+   - [Opis zasady działania algorytmu Levenshteina](#opis-zasady-dzia%C5%82ania-algorytmu-levenshteina-krok-po-kroku) 
+   - [Analiza zadania, modyfikacja algorytmu, uzasadnienie](#analiza-zadania-modyfikacja-algorytmu-uzasadnienie)
+   - [Założenia projektowe](#za%C5%82o%C5%BCenia-projektowe)
+   - [Podział i funkcjonalność programu](#funkcjonalno%C5%9B%C4%87-programu)
 
-### 2. Specyfikacja wewnętrzna:
+### 2. [Specyfikacja wewnętrzna](#-2-specyfikacja):
    - Opis programu w języku wysokiego poziomu
    - Opis funkcji bibliotek DLL
    - Schemat blokowy algorytmu
