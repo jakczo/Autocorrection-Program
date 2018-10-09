@@ -4,9 +4,9 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 
 
-Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
+<p align="center"> Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 ==================================================================
-## <p align="center">Spis treści:</p>
+## Spis treści:
 
 
 
@@ -31,4 +31,4 @@ Miara odległości edycyjnej z wykorzystaniem algorytmu Levenshteina
 
 ### 5. Analiza działania programu
 
-### 6. Wnioski
+### 6. Wnioski </p>
