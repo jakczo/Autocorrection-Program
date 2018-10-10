@@ -112,11 +112,11 @@ Powyższe zdjęcie obrazuje zasadę alokowania pamięci dla tablic statycznych, 
 Z założenia sama nazwa tablicy, jest też wskaźnikiem na pierwszy jej element, toteż nie dziwi fakt, że dynamicznie alokowana tablica jednowymiarowa nie różni się zasadą działania od tej alokowanej statycznie. Wskaźnik będący na stosie wskazuje na pierwszy element tablicy zaalokowany w pamięci. Wszystko zmienia się, gdy do deklarowania tablicy dynamicznej, wielowymiarowej używam wskaźnika na tablicę wskaźników itd. W moim programie potrzebuję dwuwymiarowej tablicy, więc dynamicznie zaalokowana tablica byłaby wskaźnikiem na tablicę wskaźników na elementy. To powoduje, że wskaźnik na tablicę wskaźników mam na stosie, więc nie ma problemu z poruszaniem się po tablicy wskaźników w pamięci, natomiast dostanie się do wartości w tablicach, na które wskazują wskaźniki z tablicy wskaźników czyni nie lada gratkę. Taka pamięć nie jest zaalokowana koło siebie, jak to jest przy statycznych tablicach, tylko jest rozmieszczona w różnych miejscach pamięci – tam, gdzie akurat było wystarczająco wolnego miejsca. O ile napisanie funkcji w języku C++, która będzie operować na tak podanych wartościach, nie jest zbytnim problemem, tak napisanie funkcji w języku asemblera jest problematyczne. Moim celem było dostawanie się do odpowiednich wartości zaalokowanych w tablicy, dodając offset tyle razy, aż się dostanę do właściwego elementu.
 Podsumowując potrzebowałem alokować pamięć dynamicznie i mieć wszystko w jednym miejscu, aby bezproblemowo się poruszać po zaalokowanych elementach tablicy. Odpowiednim rozwiązaniem było wyeliminowanie tablicy dwuwymiarowej o wymiarach m+1 na n+1 i zastąpienie jej tablicą jednowymiarową o długości (m+1) * (n+1). 
 
-To pociągnęło za sobą konieczność zmiany alogrytmów obsługujących taki model:
+To pociągnęło za sobą konieczność zmiany alogrytmu obsługującego taki model:
 
 ![Alt text](images/10.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina przed modyfikacją. Źródło – wykonanie własne.")
 
-na algorytm obsługujących taki model:
+na algorytm obsługujący taki model:
 
 ![Alt text](images/11.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina po zmodyfikowaniu. Źródło – wykonanie własne.")
 
