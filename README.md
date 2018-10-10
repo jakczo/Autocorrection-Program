@@ -1,4 +1,4 @@
-# Autocorrection-program (November 2017)
+# <p align="center"> Autocorrection-program (November 2017) </p>
 Program simulating the operation of autocorrect using the Levenshtein (Editing Distance) Algorithm. 
 Below I place a copy of the final report (in Polish language) containing all the information about the Autocorrection Program.
 
@@ -35,10 +35,11 @@ Tematem projektu było napisanie programu używającego algorytmu Levenshteina d
 #### Opis zasady działania algorytmu Levenshteina krok po kroku:
 
 Algorytm Levenshteina służy do liczenia odległości edycyjnej między dwoma wyrazami, czyli najmniejszej liczby działań prostych (wstawienie, usunięcie lub zamiana znaku), dzięki którym można przekształcić jeden ciąg znaków w drugi.
+
 Na początek, przytoczę matematyczną definicję algorytmu Levenshteina:
-   
-   @@@@
-   
+
+![Alt text](images/1.png?raw=true "matematyczna definicja algorytmu Levenshteina. Źródło: Wikipedia.")
+ 
 Wytłumaczenie:
 
 Aby obliczyć odległość edycyjną algorytmem Levenshteina, należy utworzyć tablicę o wymiarach n+1 na m+1, gdzie n i m to odpowiednio długości porównywanych ciągów znaków. Pierwszą kolumnę i wiersz wypełniamy wartościami od 0 do odpowiednio n i m, gdzie wartość 0 jest dla nich wspólna. Następnie bierzemy kolejne wartości wiersza i porównujremy literkę dotyczącą tego wiersza z literką dotyczącą kolumny. Dokonujemy porównania liter na zasadzie każdy z każdym. Przy każdym porównaniu ustawiany jest koszt: jeśli literki są identyczne, to koszt wynosi 0, jeśli nie, to 1. Po porównaniu możemy przystąpić do wypełnienia komórki wartością, która jest minimum z:
@@ -50,7 +51,7 @@ Aby obliczyć odległość edycyjną algorytmem Levenshteina, należy utworzyć 
 Po wykonaniu wszystkich porównań, naszą odległością edycyjną będzie wartość w komórce [n+1,m+1].
 Jako przykład, obliczę odległość edycyjną dwóch słów: kot i pies.
 
-@@@@
+![Alt text](images/2.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina. Źródło – wykonanie własne.")
 
 Zdjęcie przedstawia tablicę (macierz) 4 x 5 której wymiary obliczyliśmy poprzez dodanie do długości słowa „kot” liczby „1”: (3 + 1 = 4) oraz do długości słowa „pies” liczby „1”: (4+1 = 5).
 Mając tablicę 4 x 5, pierwszą wartością jaką obliczamy, jest wartość komórki (1,1) – wspólna komórka kolumny o indeksie „1” i wiersza o indeksie „1”. Wyciągamy teraz minimum z wartości:
@@ -61,7 +62,7 @@ Mając tablicę 4 x 5, pierwszą wartością jaką obliczamy, jest wartość kom
 
 Tak więc MIN(2, 2, 1)  = 1 i taką wartość wpisujemy do komórki (1,1).
 
-@@@@
+![Alt text](images/3.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina –wypełnienie pierwszej komórki. Źródło – wykonanie własne.")
 
 Teraz przesuwamy się komórkę niżej do następnego wiersza. Tą komórkę (2,1) wypełnimy wartością minimum z wartości:
 
@@ -71,20 +72,20 @@ Teraz przesuwamy się komórkę niżej do następnego wiersza. Tą komórkę (2,
 
 MIN(3, 2, 2) = 2 i to wpisujemy do aktualnej komórki (2,1).
 
-@@@@
+![Alt text](images/4.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina – wypełnienie drugiej komórki. Źródło – wykonanie własne.")
 
 Analogicznie robimy dla komórki (3,1), której wartość to będzie MIN(4, 3, 3) = 3.
 
-@@@@
+![Alt text](images/5.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina – wypełnienie pierwszej kolumny wartości. Źródło – wykonanie własne.")
 
 Teraz przechodzimy do kolejnej kolumny, wybieramy pierwszą komórkę (1,2), wybieramy minimum z wartości po lewej (1+1=2), powyżej (2+1=3) i na ukos (1+koszt (=1, bo „K” =/= „I”) = 2), 
 czyli MIN(2, 3, 2) = 2 i wpisujemy.
 
-@@@@
+![Alt text](images/6.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina – kontynuacja. Źródło – wykonanie własne. ")
 
 Czynność wykonujemy, aż nie wypełnimy całej tablicy.
 
-@@@@
+![Alt text](images/7.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina – rezultat. Źródło – wykonanie własne.")
 
 Wartość w ostatniej komórce naszej tablicy, w tym przypadku (3,4), jest naszą odległością edycyjną, co oznacza, że aby słowo „KOT” zamienić przy użyciu operacji prostych w słowo „PIES” należy wykonać co najmniej 4 takie operacje.
 
@@ -92,7 +93,7 @@ Wartość w ostatniej komórce naszej tablicy, w tym przypadku (3,4), jest nasz�
 
 Algorytm obliczający odległość Levenshteina napisany w pseudokodzie:
 
-@@@@
+![Alt text](images/8.png?raw=true "algorytm Levenshteina przedstawiony za pomocą pseudokodu. Źródło – Wikipedia.")
 
 Tak jak widać w powyższym pseudokodzie, funkcja wykonująca algorytm Levenshteina musi przyjmować dwa słowa, które są tutaj reprezentowane jako tablica typu char o ilości elementów odpowiednio m i n. Następnie funkcja musi stworzyć macierz o wspomnianych na początku wymiarach m+1 na n+1. Pierwsza pętla wypełni „zerową” kolumnę indeksami, a druga pętla „zerowy” wiersz, zgodnie z początkowymi ustaleniami. Punktem kulminacyjnym są dwie pętle, jedna zagnieżdżona w drugiej, które będą przechodzić po kolejnych elementach tablicy używając zmiennych używanych do iterowania jako indeksów tablicy. Na samym końcu funkcja zwraca zawartość ostatniego elementu tablicy tam, gdzie funkcja została wywołana.
 
@@ -102,7 +103,7 @@ Już na starcie projektowania mojego programu zauważyłem, że przekazywane do 
 
 Gdy doszedłem do projektowania funkcji w asemblerze, napotkałem kolejny problem, który wpłynął na zmodyfikowanie nie tylko argumentów przekazywanych funkcji, ale także algorytmu:
 
-@@@@
+![Alt text](images/9.png?raw=true "graficzne przedstawienie rozkładu pamięci podczas deklarowania tablicy statycznej i dynamiczne. Źródło – wykonanie własne.")
 
 Powyższe zdjęcie obrazuje zasadę alokowania pamięci dla tablic statycznych, dynamicznych jednowymiarowych i dynamicznych wielowymiarowych.
 
@@ -111,11 +112,11 @@ Podsumowując potrzebowałem alokować pamięć dynamicznie i mieć wszystko w j
 
 To pociągnęło za sobą konieczność zmiany alogrytmów obsługujących taki model:
 
-@@@@
+![Alt text](images/10.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina przed modyfikacją. Źródło – wykonanie własne.")
 
 na algorytm obsługujących taki model:
 
-@@@@
+![Alt text](images/11.png?raw=true "wizualizacja macierzy wartości w Algorytmie Levenshteina po zmodyfikowaniu. Źródło – wykonanie własne.")
 
 W rezultacie potrzebowałem tylko przechowywać adres pierwszego elementu w wybranym rejestrze, a następnie wedle uznania poruszanie się przy użyciu offsetu (przesunięcia względem początku) poruszałem się po tablicy.
 
@@ -147,7 +148,8 @@ W wersji asemblerowej starałem się trzymać konwencji odpowiedniego korzystani
 	
 #### Schemat blokowy algorytmu:
 
-@@@@
+
+![Alt text](images/12.png?raw=true "schemat blokowy funkcji w DLL. Źródło – wykonanie własne.")
 
 ## <p align="center"> 3. Specyfikacja zewnętrzna programu </p>
 
@@ -155,9 +157,9 @@ W wersji asemblerowej starałem się trzymać konwencji odpowiedniego korzystani
 
 Dane wejściowe zawarte są w jednym pliku .txt. Na pojedynczy zestaw danych wejściowych składa się 1000 wyrazów w języku angielskim i kilkanaście sekwencji DNA.
 
-@@@@
+![Alt text](images/13.png?raw=true "przykład danych wejściowych. Źródło – wykonanie własne.")
 
-@@@@
+![Alt text](images/14.png?raw=true "przykład danych wejściowych. Źródło – wykonanie własne.")
 
 #### Komunikaty:
 
@@ -169,7 +171,7 @@ Podczas używania programu użytkownik widzi komunikaty w oknie konsoli. Komunik
 
 Dane wejściowe testowe do pomiarów:
 
-@@@@
+![Alt text](images/15.png?raw=true "przykład danych testowych. Źródło – wykonanie własne.")
 
 Założenia dotyczące danych testowych:
 - Ciągi znaków są różnej długości.
@@ -182,39 +184,42 @@ Program został przeze mnie przetestowany przy użyciu pliku wejściowego testow
 
 Na wykresach kolory oznaczają odpowienio:
 
-@@@@
+![Alt text](images/16.png?raw=true "oznaczenia. Źródło - wykonanie własne.")
 
 Poniższe wykresy słupkowe obrazują uzyskane wyniki czasowe (w milisekundach) w zależności od ilości użytych wątków:
 
-@@@@
+![Alt text](images/17.png?raw=true "Wykres przedstawiający szybkość wykonania operacji dla niezoptymalizowanych bibliotek DLL napisanych kolejno w C++ i asemblerze, operujących na plikach wejściowych testowych. Źródło - wykonanie własne.")
 
-@@@@
+![Alt text](images/18.png?raw=true "Wykres przedstawiający szybkość wykonania operacji dla zoptymalizowanych bibliotek DLL napisanych kolejno w C++ i asemblerze, operujących na plikach wejściowych testowych. Źródło - wykonanie własne.")
 
-@@@@
+![Alt text](images/19.png?raw=true "Wykres przedstawiający szybkość wykonania operacji dla niezoptymalizowanych bibliotek DLL napisanych kolejno w C++ i asemblerze, operujących na plikach wejściowych z zasobem 1000 wyrazów i kilkunastu sekwencji DNA. Źródło - wykonanie własne.")
 
-@@@@
+![Alt text](images/20.png?raw=true "Wykres przedstawiający szybkość wykonania operacji dla zoptymalizowanych bibliotek DLL napisanych kolejno w C++ i asemblerze, operujących na plikach wejściowych z zasobem 1000 wyrazów i kilkunastu sekwencji DNA. Źródło - wykonanie własne.")
 
 ## <p align="center"> 5. Analiza działania programu </p>
 
 Do przeprowadzenia analizy działania programu wykorzystałem wbudowane w kompilator Visual Studio 15 narzędzie diagnostyczne „Performance Profiler”.
 
-@@@@
+![Alt text](images/21.png?raw=true "zużycie procesora dla DLL napisanej w C++. Źródło - wykonanie własne.")
 
 Po uruchomieniu tego narzędzia, mogłem zbadać zużycie procesora podczas działania mojego programu - w wersji zoptymalizowanej wyniosło ono około 10%.
 
-@@@@
+![Alt text](images/22.png?raw=true "zużycie procesora dla DLL napisanej w C++. Źródło - wykonanie własne.")
+![Alt text](images/23.png?raw=true "rejon krytyczny. Źródło - wykonanie własne.")
 
 Narzędzia wbudowane w Visual Studio 2015 pozwalają na dokładniejsze zbadanie działania programu, z dokładnością do poszczególnych funkcji. Zagłębienie się w diagram wizualizacji pozwoliło mi odnaleźć rejon krytyczny aplikacji, a co za tym idzie - odpowiedź na pytanie, która funkcja najbardziej obciąża procesor.
 
-@@@@
+![Alt text](images/24.png?raw=true "rejon krytyczny. Źródło - wykonanie własne.")
 
 Jak widać na załączonych zdjęciach, najbardziej obciążającą funkcją w aplikacji (ponad 94% obciążenia procesora przypada właśnie na nią) jest funkcja wczytująca funkcję z biblioteki DLL, w tym przypadku napisanej w C++ w wersji zoptymalizowanej.
 
 Wywołując funkcję z biblioteki DLL napisanej w asemblerze w wersji zoptymalizowanej, diagnostyka wygląda następująco:
 
-@@@@
+![Alt text](images/25.png?raw=true "zużycie procesora dla DLL napisanej w asemblerze. Źródło - wykonanie własne.")
+![Alt text](images/26.png?raw=true "zużycie procesora dla DLL napisanej w asemblerze. Źródło - wykonanie własne.")
 
-@@@@
+![Alt text](images/27.png?raw=true "rejon krytyczny. Źródło - wykonanie własne.")
+![Alt text](images/28.png?raw=true "rejon krytyczny. Źródło - wykonanie własne.")
 
 Wyniki dla wywołania funkcji z biblioteki DLL napisanej w asemblerze w wersji zoptymalizowanej niewiele odbiegają od tych uzyskanych podczas wywołania funkcji z biblioteki DLL napisanej w C++ w wersji zoptymalizowanej. Wynika to z tego, że najbardziej obciążająca procesor w tej aplikacji funkcja jest taka sama dla obu wersji bibliotek – funkcja wywołująca wspomniane biblioteki. Różnią się trochę sposobem wywołania funkcji w danej bibliotece, ale zasada jest ta sama, stąd podobne wyniki.
 
@@ -222,11 +227,11 @@ Dla niezoptymalizowanych wersji bibliotek DLL C++ i ASM diagnostyka wygląda tak
 
 - Niezoptymalizowana biblioteka DLL napisana w C++:
 
-@@@@
+![Alt text](images/29.png?raw=true "niezoptymalizowana biblioteka DLL napisana w C++. Źródło - wykonanie własne.")
 
 - Niezoptymalizowana biblioteka DLL napisana w asemblerze:
 
-@@@@
+![Alt text](images/30.png?raw=true "niezoptymalizowana biblioteka DLL napisana w asemblerze. Źródło - wykonanie własne.")
 
 Wyniki niezoptymalizowanych wersji bibliotek są do siebie podobne, ale różnią się od wyników zoptymalizowanych bibliotek, gdyż – ponownie – funkcja w niezoptymalizowanych bibliotekach jest ta sama dla obu wersji, lecz w zoptymalizowanych wersjach ona już nie występuje. Jest to funkcja związana z biblioteką VLD, której używałem do wyszukiwania i informowania o wyciekach pamięci.
 W wersji zoptymalizowanej funkcja tej biblioteki nie jest już wywoływana.
