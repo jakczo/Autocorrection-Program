@@ -28,6 +28,8 @@ Below I place a copy of the final report (in Polish language) containing all the
 
 ### 5. [Analiza działania programu](#-5-analiza-dzia%C5%82ania-programu-)
 
+### 6. [Wnioski](#-6-wnioski-)
+
 ## <p align="center"> 1. Temat projektu </p>
 
 Tematem projektu było napisanie programu używającego algorytmu Levenshteina do znalezienia słowa o najmniejszej odległości edycyjnej, względem słowa wpisanego przez użytkownika.
@@ -235,3 +237,7 @@ Dla niezoptymalizowanych wersji bibliotek DLL C++ i ASM diagnostyka wygląda tak
 
 Wyniki niezoptymalizowanych wersji bibliotek są do siebie podobne, ale różnią się od wyników zoptymalizowanych bibliotek, gdyż – ponownie – funkcja w niezoptymalizowanych bibliotekach jest ta sama dla obu wersji, lecz w zoptymalizowanych wersjach ona już nie występuje. Jest to funkcja związana z biblioteką VLD, której używałem do wyszukiwania i informowania o wyciekach pamięci.
 W wersji zoptymalizowanej funkcja tej biblioteki nie jest już wywoływana.
+
+## <p align="center"> 6. Wnioski </p>
+
+Napisanie pierwszy raz biblioteki w języku asemblerowym (ASM w wersji kompilatora Visual C++) było dla mnie nie lada wyzwaniem. Napisanie części głównej programu, jak i biblioteki w C++ nie wykraczało poza moje umiejętności, natomiast już samo podłączenie biblioteki w asemblerze i pobieranie z niej funkcji wymagało dłuższej chwili. Po przypomnieniu sobie wiadomości z laboratorium oraz wykładów, zagłębieniu się w tematyce i skupieniu się tylko na napisaniu biblioteki w asemblerze, samo programowanie nie było już takie złe. Aby uczynić kod czytelniejszym, skorzystałem z rozszerzenia do Visual Studio 15, jakim jest AsmDude – asystant programowania w asemblerze, który zmienia kod wizualnie, bo dodaje kolory do składni asemblera, ale także zawiera opisy rejestrów, podpowiedzi rozkazów i ich objaśnienia wraz z rozpiską czasu trwania każdego rozkazu podczas użycia dla danych rejestrów, a także inne narzędzia rodem ze środowiska dla języka wysokiego poziomu, co w znacznej mierze ułatwiło mi pisanie kodu. To co przykuło moją uwagę, to praktycznie pełna swoboda dostępu, a ograniczeniem dla programisty była tylko własna kreatywność i logika. Mimo, że nie udało mi się uzyskać dużo lepszych wyników biblioteki napisanej w asemblerze od biblioteki napisanej w języku C++, to wynika to raczej ze źle przemyślanego algorytmu, niż z mojej rozrzutności w kodzie w języku asemblera. Algorytm Levenshteina nie ma przygotowanej odgórnie macierzy wartości, tylko kolejno wartości są obliczane z poprzednich trzech, dlatego niemożliwym było znaczne zaoszczędzenie czasu wykorzystując rozkazy wektorowe do głównych obliczeń, a ponadto obecne kompilatory C/C++ są na tyle wydajne, że program napisany w jednym z tych języków potrafi doścignąć ten napisany w asemblerze. Moja propozycja rozwiązania problemu z użyciem rejestrów MMX do obliczania indeksów tablicy przyspieszyła kod w asemblerze, ale nieznacznie. Chciałbym również zaznaczyć, że pisząc bibliotekę w asemblerze pisałem ją w taki sposób, aby była jak najbardziej czytelna. Obserwując zależność czasową od liczby wątków można zauważyć, że średnio najlepsze czasy program dla obu bibliotek osiągał pracując na jednym wątku. Jest to zachowanie nietypowe i najprawdopodobniej wynika ono z charakterytyki klasy Thread w języku C++.
