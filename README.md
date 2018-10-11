@@ -1,5 +1,5 @@
 # <p align="center"> Autocorrection-program (November 2017) </p>
-Program simulating the operation of autocorrect using the Levenshtein (Editing Distance) Algorithm. 
+C++/Assembler language program simulating the operation of autocorrect using the Levenshtein (Editing Distance) Algorithm. 
 Below I place a copy of the final report (in Polish language) containing all the information about the Autocorrection Program.
 
 
